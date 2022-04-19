@@ -28,6 +28,114 @@
   color: #61dafb;
 }
 
+.container {
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  /* background-image: url("https://wallpapertag.com/wallpaper/full/3/d/0/236720-download-black-and-green-background-1920x1080.jpg"); */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  /* Specify the background image to be used */
+  background-image: url("https://wallpapertag.com/wallpaper/full/3/d/0/236720-download-black-and-green-background-1920x1080.jpg");
+  /* background-size: cover; */
+
+  /* Specify the background image */
+  opacity: 0.9;
+}
+
+.dialog {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.dialog h1 {
+  position: relative;
+  color: #eefbf3;
+  text-shadow: 0 0 3px #000000, 0 0 5px #0000ff;
+}
+
+.dialog h1::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 3px;
+  width: 150%;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.textBox {
+  box-sizing: border-box;
+  box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
+    rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+  min-width: 40vw;
+  min-height: 20vh;
+  background-color: #e8e6e1;
+  border-radius: 20px;
+  border: 2px solid #bbada4;
+  padding: 20px;
+}
+
+button {
+  appearance: none;
+  background-color: #151414;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 40px;
+  min-width: 0;
+  outline: none;
+  padding: 4px 6px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 15%;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
